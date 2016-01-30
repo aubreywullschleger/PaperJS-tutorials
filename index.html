@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PaperJS Tutorial</title>
+  <script type="text/javascript" src="js/paper-full.min.js"></script>
+  <script type="text/paperscript" canvas="myCanvas">
+    // var path = new Path();
+    //
+    // path.strokeColor = 'black';
+    // var start = new Point(100, 100);
+    //
+    // path.moveTo(start);
+    //
+    // path.lineTo(start + [100, -50]);
+
+    var path = new Path.Circle({
+      center: view.center,
+      radius: 30,
+      strokeColor: 'black'
+    });
+
+    function onResize(event) {
+      path.position = view.center;
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" style="border:1px solid red"></canvas>
+</body>
+</html>
